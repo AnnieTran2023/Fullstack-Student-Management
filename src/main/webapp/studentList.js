@@ -14,7 +14,7 @@ function displayText(data) {
 
 	for (student of data) {
 		let output = `<tr> 
-    		<td>${student.id}</td>
+    		<td id="${student.id}">${student.id}</td>
     		<td>${student.lastname}</td>
     		<td>${student.firstname}</td>
     		<td>${student.streetaddress}</td>

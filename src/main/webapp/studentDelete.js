@@ -1,6 +1,4 @@
-function remove() {
-
-	let idDelete = document.getElementById("idDelete").value;
+function remove(idDelete) {
 
 	let urlDelete = "http://localhost:8080/full-stack-project/deleteStudent";
 
@@ -40,8 +38,4 @@ function processResponseStatusDelete(status) {
 	}
 }
 
-document.getElementById("buttonDelete").addEventListener("click", function(event) {
-	event.preventDefault(); // Prevent default form submission behavior
-	remove();
-});
 

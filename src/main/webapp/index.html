@@ -15,7 +15,7 @@
 
 <body>
 	<h1>Student List</h1>
-	<table class="blue">
+	<table class="blue" id="table">
 		<thead>
 			<tr>
 				<th>Id</th>
@@ -59,7 +59,7 @@
 
 	<div id="popupFormDelete" class="popup-form">
 		<form id="myFormDelete">
-			<p style="text-align: center;">Confirm deletion of student?</p>
+			<p style="text-align: center;" id="message"></p>
 			<div id="buttonContainer">
 
 				<button type="submit" class="add" id="buttonDelete">Ok</button>
@@ -78,6 +78,8 @@
 				.addEventListener(
 						'click',
 						function() {
+							let form = document.getElementById('myForm');
+							form.reset();
 							document.getElementById('popupForm').style.display = 'block';
 							document.querySelector('.backdrop').style.display = 'block';
 						});
@@ -92,11 +94,13 @@
 				backdrop.style.display = 'none';
 			}
 		});
+		
 	</script>
 
 	<script src="studentList.js"></script>
 	<script src="studentAdd.js"></script>
 	<script src="studentDelete.js"></script>
+	<script src="deleteForm.js"></script>
 
 </body>
 
