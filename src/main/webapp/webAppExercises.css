@@ -15,7 +15,7 @@ body{
   table{
     border-collapse:collapse;
     width:80%;
-    margin: auto;
+    margin-left: 190px;
   }
   
   .blue{
@@ -38,12 +38,23 @@ body{
   
   tbody tr:nth-child(even){
     background:#ECF0F1;
+  }  
+
+  tbody tr:nth-child(even) .icon{
+    background:white;
+    color: black;
+  }  
+
+  tbody tr:hover {
+    background: #BDC3C7;
+    color: #FFFFFF;
   }
-  
-  tbody tr:hover{
-  background:#BDC3C7;
-    color:#FFFFFF;
+
+  tbody tr:hover .icon {
+    background: white;
+    color: black;
   }
+
   #buttonContainer{
     display: flex; 
     justify-content: center;
@@ -71,7 +82,8 @@ body{
     -webkit-user-select: none;
     touch-action: manipulation;
     width: auto;
-    margin: 30px 10px 0 10px;
+    margin: auto;
+    margin-top: 20px;
   }
   
   .add:hover,
@@ -94,9 +106,9 @@ body{
     transform: translateY(0);
   }
 
-  #buttonSubmit, #buttonDelete{
-    margin:auto;
-    margin-top:10px;
+  #buttonDelete,#buttonCancel{
+    margin: 10px 10px;
+    width: 30%;
   }
 
 
@@ -161,3 +173,23 @@ body{
     background-color: #f6f3f3;
 }
 
+.hidden {
+	background-color:white;
+}
+
+.hidden:hover{
+  background-color: white;
+}
+
+.gg-trash, .gg-pen{
+  margin: auto;
+}
+
+.gg-trash:hover, .gg-pen:hover {
+  box-shadow: 0 3px 6px #5643CC; /* Add a shadow effect when hovering */
+}
+
+
+.hidden:hover {
+  background-color: white;
+}

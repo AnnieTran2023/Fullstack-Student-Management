@@ -20,6 +20,8 @@ function displayText(data) {
     		<td>${student.streetaddress}</td>
     		<td>${student.postcode}</td>
     		<td>${student.postoffice}</td>
+    		<td class="icon"><i class="gg-pen"></i></td> 
+			<td class ="icon"><i class="gg-trash"></i></td> 
   				</tr>`;
 
 		display += output;
