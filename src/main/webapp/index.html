@@ -56,13 +56,33 @@
 		</form>
 	</div>
 
+	<div id="popupFormUpdate" class="popup-form">
+		<h2>Update Student Data</h2>
+		<form id="myFormUpdate">
+			<label for="idUpdate">Student ID</label> <input type="text"
+				id="idUpdate" name="id" required disabled><br> <label
+				for="firstnameUpdate">First name</label> <input type="text"
+				id="firstnameUpdate" name="firstname" required><br> <label
+				for="lastnameUpdate">Last Name</label> <input type="text"
+				id="lastnameUpdate" name="lastname"><br> <label
+				for="streetaddressUpdate">Street Address</label> <input type="text"
+				id="streetaddressUpdate" name="streetaddress"><br> <label
+				for="postcodeUpdate">Postcode</label> <input type="text"
+				id="postcodeUpdate" name="postcode"><br> <label
+				for="postofficeUpdate">Post Office</label> <input type="text"
+				id="postofficeUpdate" name="postoffice"><br>
+			<button type="submit" class="add" id="buttonUpdate">Update</button>
+		</form>
+	</div>
+
+
 
 	<div id="popupFormDelete" class="popup-form">
 		<form id="myFormDelete">
 			<p style="text-align: center;" id="message"></p>
 			<div id="buttonContainer">
 
-				<button type="submit" class="add" id="buttonDelete">Ok</button>
+				<button type="submit" class="add" id="buttonDelete">OK</button>
 				<button type="submit" class="add" id="buttonCancel">Cancel</button>
 			</div>
 		</form>
@@ -94,13 +114,14 @@
 				backdrop.style.display = 'none';
 			}
 		});
-		
 	</script>
 
 	<script src="studentList.js"></script>
 	<script src="studentAdd.js"></script>
 	<script src="studentDelete.js"></script>
 	<script src="deleteForm.js"></script>
+	<script src="studentUpdate.js"></script>
+	<script src="updateForm.js"></script>
 
 </body>
 
