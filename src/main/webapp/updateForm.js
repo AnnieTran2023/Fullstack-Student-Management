@@ -22,6 +22,12 @@ document.querySelector("tbody").addEventListener('click', function(event) {
 		document.getElementById('idUpdate').disabled = true;
 
 		document.getElementById('popupFormUpdate').style.display = 'block';
+		document.querySelector('.backdrop').style.display = 'block';
 
 	}
+})
+
+document.getElementById("buttonUpdate").addEventListener('click', function(event) {
+	event.preventDefault();
+	update();
 })

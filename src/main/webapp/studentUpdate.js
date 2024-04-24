@@ -1,4 +1,4 @@
-function update(firstname, lastname, streetaddress, postcode, postoffice) {
+function update() {
 
 	let idUpdate = document.getElementById("idUpdate").value;
 	let firstnameUpdate = document.getElementById("firstnameUpdate").value;
@@ -44,5 +44,3 @@ function processResponseStatusUpdate(status) {
         alert("The database is temporarily unavailable. Please try again later");
     }
 }
-
-document.

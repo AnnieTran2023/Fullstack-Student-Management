@@ -105,15 +105,26 @@
 						});
 
 		// Close the form when clicking outside of it or on the backdrop
-		window.addEventListener('click', function(event) {
-			let form = document.getElementById('popupForm');
-			let backdrop = document.querySelector('.backdrop');
+		window
+				.addEventListener('click',
+						function(event) {
+							let form = document.getElementById('popupForm');
+							let formUpdate = document
+									.getElementById('popupFormUpdate');
+							let formDelete = document
+									.getElementById('popupFormDelete');
+							let backdrop = document.querySelector('.backdrop');
 
-			if (event.target == form || event.target == backdrop) {
-				form.style.display = 'none';
-				backdrop.style.display = 'none';
-			}
-		});
+							if (event.target == form
+									|| event.target == backdrop
+									|| event.target == formUpdate
+									|| event.target == formDelete) {
+								form.style.display = 'none';
+								formUpdate.style.display = 'none';
+								formDelete.style.display = 'none';
+								backdrop.style.display = 'none';
+							}
+						});
 	</script>
 
 	<script src="studentList.js"></script>
