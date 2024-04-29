@@ -13,12 +13,11 @@ import com.google.gson.Gson;
 
 import data_access.StudentDAO;
 
-@WebServlet("/searchStudent")
-public class StudentDeleteServlet extends HttpServlet {
+@WebServlet("/studentSearch")
+public class StudentSearch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
 
@@ -29,11 +28,10 @@ public class StudentDeleteServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		
 		StudentDAO student = new StudentDAO();
-		Student searchStudent = student.getStudentbyId(id);
+		Student studentSearch = student.getStudentbyId(id);
 		
 		Gson gson = new Gson();
-		String json = gson.toJson(searchStudent);
+		String json = gson.toJson(studentSearch);
 		out.print(json);
 	}
-
 }

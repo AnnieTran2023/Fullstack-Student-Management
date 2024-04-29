@@ -64,7 +64,9 @@ public class StudentDAO {
 
 	}
 
-	public void getStudentbyId(int searchID) {
+	public Student getStudentbyId (int searchID) {
+		
+		Student searchStudent = null;
 
 		Connection connection = null;
 		PreparedStatement preparedstatement = null;
@@ -85,19 +87,22 @@ public class StudentDAO {
 				String streetaddress = resultSet.getString("streetaddress");
 				int postcode = resultSet.getInt("postcode");
 				String postoffice = resultSet.getString("postoffice");
-
-				System.out.println(String.format("%d, %s %s, %s, %d %s", id, firstname, lastname, streetaddress,
-						postcode, postoffice));
+				
+				searchStudent = new Student (id, firstname, lastname, streetaddress, postcode, postoffice);
+				
 
 			} else {
 				System.out.println(String.format("Unknown student id (%d)", searchID));
+				searchStudent = null;
+			
 			}
 		} catch (SQLException sqle) {
-			System.out.println("\n[ERROR] StudentDAO: getAllStudents() failed. " + sqle.getMessage() + "\n");
-
+			System.out.println("\n[ERROR] StudentDAO: getStudentByID() failed. " + sqle.getMessage() + "\n");
+			
 		} finally {
 			DbUtils.closeQuietly(resultSet, preparedstatement, connection);
 		}
+		return searchStudent;
 
 	}
 

@@ -170,7 +170,7 @@ tbody tr:hover .icon {
 	margin-bottom:20px;
 }
 
-#search {
+#idSearch {
 	width: 20%;
 	height: 40px;
 	padding: 5px;
@@ -180,7 +180,7 @@ tbody tr:hover .icon {
 	margin-right:12px;
 }
 
-#search:hover {
+#idSearch:hover {
 	background-color: #f6f3f3;
 }
 
