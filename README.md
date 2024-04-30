@@ -5,6 +5,7 @@ This is a web application for managing student data. It allows users to list all
 
 ## Features
 - List all students
+![Screen 1](screen1.png)
 - Add new students
 ![Screen 2](screen2.png)
 - Delete existing students
