@@ -46,5 +46,5 @@ This is a web application for managing student data. It allows users to list all
     Set up the project to run on your local Tomcat server.
     Start the Tomcat server and deploy the application.
     Access the application through your web browser:
-      Main page: http://localhost:8080/full-stack-project/mainPage
+      Main page: http://localhost:8080/full-stack-project/index.html
 
