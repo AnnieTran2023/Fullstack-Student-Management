@@ -9,7 +9,8 @@ This is a web application for managing student data. It allows users to list all
 - Add new students
 ![Screen 2](screen2.png)
 - Delete existing students
-- Update student details 
+- Update student details
+- Search student by ID
 
 ## Technologies Used
 - Java Servlets
